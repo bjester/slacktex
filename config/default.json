@@ -1,0 +1,18 @@
+{
+  "server": {
+    "host": "example.com",
+    "port": 8000,
+    "path": "/command",
+    "output_dir": "",
+    "temp_dir": "/tmp",
+    "png_bin": "/usr/bin/dvipng"
+  },
+  "slack": {
+    "token": "",
+    "command": "/command"
+  },
+  "tex": {
+    "bin": "/usr/bin/latex",
+    "template": "./template.tex"
+  }
+}

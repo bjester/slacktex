@@ -24,6 +24,9 @@
   "homepage": "https://github.com/bjester/slacktex",
   "dependencies": {
     "config": "^1.13.0",
-    "hapi": "^8.4.0"
+    "fs-extra": "^0.18.2",
+    "hapi": "^8.4.0",
+    "joi": "^6.4.1",
+    "js-md5": "^0.3.0"
   }
 }

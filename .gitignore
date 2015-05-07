@@ -1,6 +1,9 @@
 # VS Code settings
 .settings/
 
+config/*
+!config/default.json
+
 #-------------------------
 # Logs
 logs
