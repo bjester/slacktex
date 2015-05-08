@@ -5,16 +5,18 @@
     "request_path": "/command",
     "output_path": "",
     "output_dir": "",
-    "temp_dir": "/tmp",
-    "png_bin": "/usr/bin/dvipng"
+    "temp_dir": "/tmp"
   },
   "slack": {
     "token": "",
     "command": "/command",
     "webhook_url": ""
   },
+  "png": {
+    "bin": "/usr/bin/dvipng"
+  },
   "tex": {
     "bin": "/usr/bin/latex",
-    "template": "./template.tex"
+    "template": "./resource/template.tex"
   }
 }

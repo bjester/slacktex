@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Set up symlink in node_modules
+mkdir -p node_modules
+ln -s ../lib node_modules/lib
