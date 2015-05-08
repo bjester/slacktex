@@ -2,14 +2,16 @@
   "server": {
     "host": "example.com",
     "port": 8000,
-    "path": "/command",
+    "request_path": "/command",
+    "output_path": "",
     "output_dir": "",
     "temp_dir": "/tmp",
     "png_bin": "/usr/bin/dvipng"
   },
   "slack": {
     "token": "",
-    "command": "/command"
+    "command": "/command",
+    "webhook_url": ""
   },
   "tex": {
     "bin": "/usr/bin/latex",

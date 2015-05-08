@@ -15,8 +15,7 @@ server.connection(
 server.route(
 {
   method: 'POST',
-  path: config.get('server.path'), 
-  //debug: ['error'],
+  path: config.get('server.request_path'), 
   handler: function (request, reply) 
   {
     try
@@ -35,8 +34,8 @@ server.route(
     }
     catch (e)
     {
-      console.log(Controller, controller, e);
-      return reply('An error occurred', null);
+      reply('An error occurred', null);
+      throw e;
     }
   },
   config: 
@@ -47,7 +46,15 @@ server.route(
       {
         token: Joi.string().required().valid(config.get('slack.token')),
         command: Joi.string().required().valid(config.get('slack.command')),
-        text: Joi.string().required()
+        text: Joi.string().required(),
+        user_name: Joi.string().required(),
+        channel_name: Joi.string().required(),
+        
+        // Not used
+        team_id: Joi.any().optional(),
+        team_domain: Joi.any().optional(),
+        channel_id: Joi.any().optional(),
+        user_id: Joi.any().optional()
       }
     }  
   }
