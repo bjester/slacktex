@@ -4,6 +4,13 @@ An API server for integrating LaTeX formulas into Slack. (What is [Slack](https:
 ## About
 This API accepts requests originating from a Slack slash command.  The slash command input is expected to be properly formatted LaTeX formula code.  From the code, it generates images and places them in a user specified directory.  It then generates a URL for the image and POSTs back to Slack with the link.
 
+## Prerequisites
+- Linux
+- Apache or nginx
+- node
+- dvipng
+- latex
+
 ## Setup
 First things first, run the following:
 ```bash
@@ -12,8 +19,11 @@ $ npm install
 ```
 
 ## Configuration
-The default configuration is located in `config/default.json`.  To customize this simply 
-make a copy of the file and customize it. 
+You'll need to add two things to slack:
+- A slash command
+- An incoming webhook
+
+While setting those up, you'll need to determine certain configuration values that are also needed for slacktex. The default configuration is located in `config/default.json`.  To customize this simply make a copy of the file and customize it. 
 ```bash
 $ cd config
 $ cp default.json local.json
